@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cheer-string-generator/static/css/main.40ca48f2.css",
-    "main.js": "/cheer-string-generator/static/js/main.da35e320.js",
+    "main.css": "/cheer-string-generator/static/css/main.a5eb3345.css",
+    "main.js": "/cheer-string-generator/static/js/main.695d805a.js",
     "static/js/787.73ee5636.chunk.js": "/cheer-string-generator/static/js/787.73ee5636.chunk.js",
     "index.html": "/cheer-string-generator/index.html",
-    "main.40ca48f2.css.map": "/cheer-string-generator/static/css/main.40ca48f2.css.map",
-    "main.da35e320.js.map": "/cheer-string-generator/static/js/main.da35e320.js.map",
+    "main.a5eb3345.css.map": "/cheer-string-generator/static/css/main.a5eb3345.css.map",
+    "main.695d805a.js.map": "/cheer-string-generator/static/js/main.695d805a.js.map",
     "787.73ee5636.chunk.js.map": "/cheer-string-generator/static/js/787.73ee5636.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40ca48f2.css",
-    "static/js/main.da35e320.js"
+    "static/css/main.a5eb3345.css",
+    "static/js/main.695d805a.js"
   ]
 }
