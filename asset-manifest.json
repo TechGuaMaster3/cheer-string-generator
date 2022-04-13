@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cheer-string-generator/static/css/main.69326015.css",
+    "main.js": "/cheer-string-generator/static/js/main.6a049512.js",
+    "static/js/787.73ee5636.chunk.js": "/cheer-string-generator/static/js/787.73ee5636.chunk.js",
+    "index.html": "/cheer-string-generator/index.html",
+    "main.69326015.css.map": "/cheer-string-generator/static/css/main.69326015.css.map",
+    "main.6a049512.js.map": "/cheer-string-generator/static/js/main.6a049512.js.map",
+    "787.73ee5636.chunk.js.map": "/cheer-string-generator/static/js/787.73ee5636.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69326015.css",
+    "static/js/main.6a049512.js"
+  ]
+}
