@@ -10,6 +10,7 @@ function App() {
   const [result, setResult] = useState("");
   const [type, setType] = useState("");
   const [alert, setAlert] = useState(false);
+  const [clear, setClear] = useState(false);
   const [numberAlert, setNumberAlert] = useState(false);
   // const [random, setRandom] = useState(0);
   // const type = ["1", "100", "1000", "5000", "10000"];
@@ -46,7 +47,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="flex flex-wrap bg-gray-400 p-5 mx-10 my-3 rounded shadow max-w-5xl">
-          <div className="w-full bg-gray-400 p-5 mx-auto">
+          <div className="w-full p-5 mx-auto">
             <div className="text-lg font-semibold text-gray-900 m-1">
               Bits (defalut:87)
             </div>
@@ -84,7 +85,7 @@ function App() {
               </button>
             ))}
           </div>
-          <div className="flex flex-wrap bg-gray-400 w-full p-5 my-3 mx-4 md:mx-12 lg:mx-16">
+          <div className="flex flex-wrap  w-full p-5 my-3 mx-4 md:mx-12 lg:mx-16">
             <div className="text-lg font-semibold text-gray-900 m-1">
               Preview
             </div>
@@ -160,34 +161,58 @@ function App() {
               flex
               items-center
               p-2
+              w-full
               mx-auto
             "
             >
               <button
                 className="
-                w-full
-                bg-white
-                hover:bg-gray-200
-                text-gray-700
-                text-lg
-                font-bold
-                py-1
-                px-2
+                bg-green-600
+                hover:bg-green-500
+                text-white
+                text-7xl
+                font-semibold
+                py-5
+                px-7
                 mt-2
-                rounded
-                border border-gray-800
+                mx-auto
+                rounded-lg
+                shadow
               "
                 type="button"
                 onClick={() => {
                   copy(result);
                 }}
               >
-                Copy
+                COPY
               </button>
             </div>
+            <button
+              className="
+                bg-white
+                hover:bg-gray-200
+                text-gray-800
+                hover:text-gray-600
+                text-lg
+                font-bold
+                py-1
+                px-2
+                mt-2
+                mx-auto
+                rounded
+                shadow
+              "
+              type="button"
+              onClick={() => {
+                setClear(true);
+              }}
+            >
+              Clear
+            </button>
           </div>
         </div>
       </header>
+      {/* <!-- alert window start --> */}
       <div
         className={`
           ${alert ? "flex" : "hidden"}
@@ -291,7 +316,7 @@ function App() {
               <button
                 className="
                   w-full
-                  bg-green-700
+                  bg-green-600
                   hover:bg-green-500
                   text-white
                   font-bold
@@ -309,6 +334,133 @@ function App() {
           </div>
         </div>
       </div>
+      {/* <!-- alert window end --> */}
+      {/* <!-- clear window start --> */}
+      <div
+        className={`
+          ${clear ? "flex" : "hidden"}
+          bg-gray-700 bg-opacity-75
+          overflow-y-auto overflow-x-hidden
+          fixed
+          right-0
+          left-0
+          top-0
+          z-50
+          justify-center
+          items-center
+          inset-0
+          h-modal`}
+      >
+        <div className="relative px-4">
+          <div
+            className="
+              h-auto
+              w-auto
+              relative
+              bg-white
+              rounded-lg
+              shadow-2xl
+              border-6 border-gray-600
+
+            "
+          >
+            <div
+              className="
+                justify-between
+                items-center
+                pt-5
+                rounded-t
+                text-center
+              "
+            >
+              <h3 className="text-3xl font-bold text-gray-900">清？</h3>
+            </div>
+            {/* <table className="min-w-full divide-y divide-gray-200">
+              <tbody className="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td className="px-6 py-4">
+                    <div
+                      className="
+                        text-lg text-gray-900
+                        font-bold 
+                        flex flex-wrap
+                        place-content-center
+                      "
+                    >
+                      <div className="preview w-full">
+                        {parse(
+                          Converter.formatText(
+                            type + number,
+                            [".", "!", "?", ":", ";", ",", " "],
+                            90,
+                            null
+                          ).display
+                        )}
+                      </div>
+                      <div className="flex flex-wrap my-1">
+                        這是娛樂消費，請遵循量力而為原則
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table> */}
+            <div
+              className="
+                items-center
+                p-6
+                space-x-2
+                rounded-b
+                
+                grid grid-cols-2
+              "
+            >
+              <button
+                className="
+                  w-full
+                  bg-transparent
+                  text-gray-800
+                  hover:text-gray-400
+                  font-bold
+                  py-2
+                  px-4
+                  border border-gray-800
+                  hover:border-gray-400
+                  rounded
+                  col-span-1
+                "
+                type="button"
+                onClick={() => {
+                  setClear(false);
+                }}
+              >
+                別。
+              </button>
+              <button
+                className="
+                  w-full
+                  bg-green-600
+                  hover:bg-green-500
+                  text-white
+                  font-bold
+                  py-2
+                  px-4
+                  rounded
+                  col-span-1
+                "
+                type="button"
+                onClick={() => {
+                  setClear(false);
+                  setResult("");
+                }}
+              >
+                清。
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <!-- clear window end --> */}
     </div>
   );
 }
